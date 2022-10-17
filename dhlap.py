@@ -55,7 +55,6 @@ def main():
     import json
     from openpyxl import load_workbook
 
-
     terms="AD"
     vendor_dhl=100311 
     vendor_fedex=100396
