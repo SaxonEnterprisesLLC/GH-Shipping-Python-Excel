@@ -1,11 +1,8 @@
 # William Leonard, Saxon Enterprises LLC
 # Contact: wfleonard@saxonenterprises.net 732-673-4260
-# Fedex program for GH AR Shipping Data 
-# Last Edit wfl 09-09-2022
-# 09-09-2022    added csv_to_exel using pandas, cleaned up money issue 
-#               added csv file extension check
-#               added new GL entries to ledger dict
-# 09-16-2022    added exit message
+# UPS program for GH AR Shipping Data 
+# Last Edit wfl 10-21-2022
+# 
 
 def conv_date(d):
     x = str(d)
@@ -75,19 +72,19 @@ def main():
 
     terms="AD"
     #vendor_dhl=100311 
-    vendor_fedex=100396
-    #vendor_ups=100370
-    #vender1="UPS"
+    #vendor_fedex=100396
+    vendor_ups=100370
+    vender1="UPS"
     #vender2="DHL"
-    vender3="FEDEX"
+    #vender3="FEDEX"
     numberFormat = '#,##0.00'
     interCompany = 1
     generalLedger = "9000-00-0000"
 
     #add menu logic to pick vender
-    current_vender = vender3
+    current_vender = vender1
 
-    if current_vender == vender3:
+    if current_vender == vender1:
         # Columns to use in conversion
         invDate=3
         invCol=4
@@ -95,22 +92,22 @@ def main():
         glCol=52
         amountCol=12
         notesCol=108
-        fedex_excel = "FedEx_Shipping_Feed.xlsx"
-        fedex_sheet = "FEDEX-AP-Data"
+        ups_excel = "UPS_Shipping_Feed.xlsx"
+        ups_sheet = "UPS-AP-Data"
         charge="Net Charge Amount"
 
-        fedex_csv = input("Enter the FedEx shipping data file as .csv: ")
+        ups_csv = input("Enter the UPS shipping data file as .csv: ")
         
-        while not fedex_csv.endswith(".csv"):
-            print(f"\n\n{fedex_csv} is an invalid file name/extension")
-            fedex_csv = input("Please input a .CSV file from FedEx: ")
+        while not ups_csv.endswith(".csv"):
+            print(f"\n\n{ups_csv} is an invalid file name/extension")
+            ups_csv = input("Please input a .CSV file from UPS: ")
 
         # Converts CSV file to an Excel .xlsx with proper datatypes (ie money)
-        csv.csvToExcel(fedex_csv, fedex_excel, charge, current_vender)
-        v_wb = load_workbook(filename=fedex_excel)
+        csv.csvToExcel(ups_csv, ups_excel, charge, current_vender)
+        v_wb = load_workbook(filename=ups_excel)
         
         v_ws = v_wb.active
-        v_ws1 = v_wb.create_sheet(fedex_sheet)
+        v_ws1 = v_wb.create_sheet(ups_sheet)
 
         t_rows = v_ws.max_row
         t_cols = v_ws.max_column
@@ -165,7 +162,7 @@ def main():
         for r in range(2,t_rows+1):
             for c in range(1,t_cols):  
                 if v_ws.cell(row=r, column=4).value != invoiceNumber:
-                    v_ws1.cell(row=r, column=1).value = vendor_fedex                                        #Vendor Number
+                    v_ws1.cell(row=r, column=1).value = vendor_ups                                        #Vendor Number
                     v_ws1.cell(row=r, column=2).value = terms                                               #Default Billing Terms
                     v_ws1.cell(row=r, column=3).value = conv_date(v_ws.cell(row=r, column=invDate).value)
                     v_ws1.cell(row=r, column=4).value = v_ws.cell(row=r, column=invCol).value               #Invoice Number
@@ -193,12 +190,12 @@ def main():
                     v_ws1.cell(row=r, column=34).value = v_ws.cell(row=r, column=glCol).value           #Notes
                     invoiceNumber = v_ws.cell(row=r, column=4).value                                        #Incremented Invoice Number 
 
-        v_wb.save(fedex_excel)
+        v_wb.save(ups_excel)
     v_wb.close()
 
-    workbook = load_workbook(filename=fedex_excel)
+    workbook = load_workbook(filename=ups_excel)
     workbook.active = 1
-    sheet = workbook[fedex_sheet]
+    sheet = workbook[ups_sheet]
 
     for r in range(2,t_rows+1):
         for c in range(1,t_cols):
@@ -208,11 +205,11 @@ def main():
     
     # removing the shipping codes column 
     sheet.delete_cols(34)
-    workbook.save(fedex_excel)
+    workbook.save(ups_excel)
     workbook.close()
     print()
-    print(f"We have successfully created a FEDEX Excel file named {fedex_excel} with a Tab named {fedex_sheet}")
-    t.sleep(3)
+    print(f"We have successfully created a FEDEX Excel file named {ups_excel} with a Tab named {ups_sheet}")
+    t.sleep(2)
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,20 @@
+﻿Account Number,Invoice Number,Invoice Date,Tracking Number,Pickup Number,Reference Number 1,Reference Number 2,Reference Number 3,Reference Number 4,Reference Number 5,Shipping System / Adjustment,Zone,Service Type,Published Charge,Incentives,Net Amount Due
+0000083Y99,000001611124247,"Oct 14, 2022",,,,,,,,Discounts,,,,,-$419.12
+0000083Y99,000001611124247,"Oct 14, 2022",,,,,,,,Discounts,,,,,
+0000083Y99,000001611124247,"Oct 14, 2022",,,,,,,,Discounts,,,,,
+0000083Y99,000001611124247,"Oct 14, 2022",,,,,,,,Discounts,,,,,
+0000083Y99,000001611124247,"Oct 14, 2022",,,,,,,,Transportation Charges,,,,,$586.90
+0000083Y99,000001611124247,"Oct 14, 2022",1Z91800V0499617130,,PROFORMA NR.95,,,,,Import Shipment Detail,451,WW Saver,$586.90,$419.12,$167.78
+0000084VF3,000001610995899,"Oct 14, 2022",,,,,,,,Discounts,,,,,
+0000084VF3,000001610995899,"Oct 14, 2022",,,,,,,,Discounts,,,,,
+0000084VF3,000001610995899,"Oct 14, 2022",,,,,,,,Discounts,,,,,
+0000084VF3,000001610995899,"Oct 14, 2022",1Z49A7W46698177041,,VG,,,,,Import Shipment Detail,951,WW Express,$350.64,$251.44,$99.20
+0000084VF3,000001610995899,"Oct 14, 2022",1ZF197R06693111897,,,,,,,Import Shipment Detail,951,WW Express,$246.41,$170.49,$75.92
+0000084VF3,000001610995899,"Oct 14, 2022",,,,,,,,Consignee Charges,,,,,$597.05
+0000084VF3,000001610995899,"Oct 14, 2022",,,,,,,,Discounts,,,,,-$421.93
+0000084VF3,000000084VF3422,"Oct 15, 2022",,,,,,,,Fees,,,,,$4.44
+0000084VF3,000000084VF3422,"Oct 15, 2022",,,,,,,,Fees,,,$4.44,$0.00,$4.44
+000065V624,000001610709868,"Oct 13, 2022",1Z00WR690401374576,,VG,1347,,,,Import Shipment Detail,451,WW Saver,$791.68,$0.00,$791.68
+000065V624,000001610709868,"Oct 13, 2022",,,,,,,,US Customs Duties,,,,,$733.80
+000065V624,000001610709868,"Oct 13, 2022",,,,,,,,Brokerage Charges,,,,,$15.52
+000065V624,000001610709868,"Oct 13, 2022",,,,,,,,Govt. Charges Other Than Duties,,,,,$42.36
