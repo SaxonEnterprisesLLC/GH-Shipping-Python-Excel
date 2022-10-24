@@ -6,6 +6,7 @@
 #               added csv file extension check
 #               added new GL entries to ledger dict
 # 09-16-2022    added exit message
+# 10-21-2022    took out additional GL Lookup data
 
 def conv_date(d):
     x = str(d)
