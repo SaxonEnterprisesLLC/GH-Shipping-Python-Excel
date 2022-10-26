@@ -2,11 +2,15 @@
 # Contact: wfleonard@saxonenterprises.net 732-673-4260
 # Shippers Menu program for GH AR Shipping Data 
 # 09-16-2022    Error checking menu item entries
+# 10-24-2022    added UPS menu item (import)
 
 import os
 import time
 import fedexap as fedex
 import dhlap as dhl
+import upsap as ups
+
+# Change to "cls" before sending to GH
 clear = lambda: os.system('clear')
 
 def print_menu():
@@ -29,8 +33,7 @@ def option2():
      dhl.main()
 
 def option3():
-     print('UPS Shipping Data Transfer NOT Available Yet')
-     time.sleep(2)
+     ups.main()
 
 def main():
     while(True):

@@ -1,7 +1,7 @@
 # William Leonard, Saxon Enterprises LLC
 # Contact: wfleonard@saxonenterprises.net 732-673-4260
 # CSV to Excel program for GH AR Shipping Data 
-# 10/14/22 Add new date conversion 
+# 10/14/22 Add new date conversion mmddyy
 
 def conv_date(d):
     d = list(d)

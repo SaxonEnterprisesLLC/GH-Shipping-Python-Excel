@@ -5,9 +5,49 @@
 # 
 
 def conv_date(d):
-    x = str(d)
-    invoice = x[4:6] + x[6:8] + x[2:4]
-    return invoice
+    dlist = list(d)
+    dl = len(d)
+
+    for x in range(dl):
+        if dlist[1] == "-":
+            dlist[1] = dlist[0]
+            dlist[0] = "0"
+            day = dlist[:2]
+            mon = dlist[2:5]
+            year = dlist[-2:]
+            m=1
+        elif dlist[2] == "-":
+            day = dlist[:2]
+            mon = dlist[3:6]
+            year = dlist[-2:]
+            m=2
+
+    month = {
+        "Jan":"01",
+        "Feb":"02",
+        "Mar":"03",
+        "Apr":"04",
+        "May":"05",
+        "Jun":"06",
+        "Jul":"07",
+        "Aug":"08",
+        "Sep":"09",
+        "Oct":"10",
+        "Nov":"11",
+        "Dec":"12"
+        }
+
+    dd=""
+    for y in dlist:
+        dd += y
+
+    if m==1:
+        mon=month.get(dd[2:5], "XX")
+    else:
+        mon=month.get(dd[3:6], "XX")
+    
+    date = mon+dd[0:2]+dd[-2:]
+    return date
 
 def lookUpGL(gl):
     generalLedger = "9000-00-0000"
@@ -87,14 +127,17 @@ def main():
     if current_vender == vender1:
         # Columns to use in conversion
         invDate=3
-        invCol=4
-        descCol=50
-        glCol=52
-        amountCol=12
-        notesCol=108
+        invCol=2
+        descCol=11
+        glCol=7
+        amountCol=16
+        notesCol=6
+        tracking=4
+        pubcharged=14
+        incentives=15
         ups_excel = "UPS_Shipping_Feed.xlsx"
         ups_sheet = "UPS-AP-Data"
-        charge="Net Charge Amount"
+        charge="Published Charge"
 
         ups_csv = input("Enter the UPS shipping data file as .csv: ")
         
@@ -157,11 +200,11 @@ def main():
             y+=1
 
         #Create starting Invoice Number 
-        invoiceNumber = "00000000"
+        invoiceNumber = "000000000000"
 
         for r in range(2,t_rows+1):
             for c in range(1,t_cols):  
-                if v_ws.cell(row=r, column=4).value != invoiceNumber:
+                if v_ws.cell(row=r, column=2).value != invoiceNumber:
                     v_ws1.cell(row=r, column=1).value = vendor_ups                                        #Vendor Number
                     v_ws1.cell(row=r, column=2).value = terms                                               #Default Billing Terms
                     v_ws1.cell(row=r, column=3).value = conv_date(v_ws.cell(row=r, column=invDate).value)
@@ -169,26 +212,26 @@ def main():
                     v_ws1.cell(row=r, column=5).value = v_ws.cell(row=r, column=descCol).value              #Description
                     v_ws1.cell(row=r, column=9).value = interCompany                                        #Inter Company
                     v_ws1.cell(row=r, column=10).value = generalLedger   #General Ledger
-                    if v_ws.cell(row=r, column=amountCol).value is None:
+                    if v_ws.cell(row=r, column=tracking).value is None:
                         v_ws1.cell(row=r, column=11).value = 0
                     else:
-                        v_ws1.cell(row=r, column=11).value = v_ws.cell(row=r, column=amountCol).value           #Amount
+                        v_ws1.cell(row=r, column=11).value = (v_ws.cell(row=r, column=pubcharged).value - v_ws.cell(row=r, column=incentives).value)           #Amount
                     v_ws1.cell(row=r, column=11).number_format = numberFormat   
                     v_ws1.cell(row=r, column=17).value = v_ws.cell(row=r, column=notesCol).value
                     v_ws1.cell(row=r, column=34).value = v_ws.cell(row=r, column=glCol).value          #Notes
-                    invoiceNumber = v_ws.cell(row=r, column=4).value                                        #Incremented Invoice Number 
+                    invoiceNumber = v_ws.cell(row=r, column=2).value                                        #Incremented Invoice Number 
                 else:
                     v_ws1.cell(row=r, column=5).value = v_ws.cell(row=r, column=descCol).value              #Description
                     v_ws1.cell(row=r, column=9).value = interCompany                            #Inter Company
                     v_ws1.cell(row=r, column=10).value = generalLedger                                      #General Ledger
-                    if v_ws.cell(row=r, column=amountCol).value is None:
+                    if v_ws.cell(row=r, column=tracking).value is None:
                         v_ws1.cell(row=r, column=11).value = 0
                     else:
                         v_ws1.cell(row=r, column=11).value = v_ws.cell(row=r, column=amountCol).value            #Amount
                     v_ws1.cell(row=r, column=11).number_format = numberFormat   
                     v_ws1.cell(row=r, column=17).value = v_ws.cell(row=r, column=notesCol).value
                     v_ws1.cell(row=r, column=34).value = v_ws.cell(row=r, column=glCol).value           #Notes
-                    invoiceNumber = v_ws.cell(row=r, column=4).value                                        #Incremented Invoice Number 
+                    invoiceNumber = v_ws.cell(row=r, column=2).value                                        #Incremented Invoice Number 
 
         v_wb.save(ups_excel)
     v_wb.close()
@@ -200,15 +243,13 @@ def main():
     for r in range(2,t_rows+1):
         for c in range(1,t_cols):
             sheet.cell(row=r, column=10).value = lookUpGL(sheet.cell(row=r, column=34).value)
-            #if sheet.cell(row=r, column=10).value == '9000-00-0000':
-                #sheet.cell(row=r, column=10).value = lookUpGL(sheet.cell(row=r, column=5).value)
     
     # removing the shipping codes column 
     sheet.delete_cols(34)
     workbook.save(ups_excel)
     workbook.close()
     print()
-    print(f"We have successfully created a FEDEX Excel file named {ups_excel} with a Tab named {ups_sheet}")
+    print(f"We have successfully created a UPS Excel file named {ups_excel} with a Tab named {ups_sheet}")
     t.sleep(2)
 
 if __name__ == "__main__":
