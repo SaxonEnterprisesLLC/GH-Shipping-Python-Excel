@@ -227,7 +227,7 @@ def main():
                     if v_ws.cell(row=r, column=tracking).value is None:
                         v_ws1.cell(row=r, column=11).value = 0
                     else:
-                        v_ws1.cell(row=r, column=11).value = v_ws.cell(row=r, column=amountCol).value            #Amount
+                        v_ws1.cell(row=r, column=11).value = (v_ws.cell(row=r, column=pubcharged).value - v_ws.cell(row=r, column=incentives).value)             #Amount
                     v_ws1.cell(row=r, column=11).number_format = numberFormat   
                     v_ws1.cell(row=r, column=17).value = v_ws.cell(row=r, column=notesCol).value
                     v_ws1.cell(row=r, column=34).value = v_ws.cell(row=r, column=glCol).value           #Notes
