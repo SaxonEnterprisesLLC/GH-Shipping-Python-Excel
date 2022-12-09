@@ -109,14 +109,11 @@ def main():
     import csv_to_excel as csv
     import json
     from openpyxl import load_workbook
+    from openpyxl.styles import numbers
 
     terms="AD"
-    #vendor_dhl=100311 
-    #vendor_fedex=100396
     vendor_ups=100370
     vender1="UPS"
-    #vender2="DHL"
-    #vender3="FEDEX"
     numberFormat = '#,##0.00'
     interCompany = 1
     generalLedger = "9000-00-0000"
@@ -126,18 +123,18 @@ def main():
 
     if current_vender == vender1:
         # Columns to use in conversion
-        invDate=3
-        invCol=2
-        descCol=11
-        glCol=7
-        amountCol=16
-        notesCol=6
-        tracking=4
-        pubcharged=14
-        incentives=15
+        invDate=3           #C
+        invCol=2            #B
+        descCol=11          #K
+        glCol=7             #G Ref2
+        amountCol=16        #P
+        notesCol=6          #F Ref1
+        tracking=4          #D
+        #pubcharged=14      #N
+        #incentives=15      #O
         ups_excel = "UPS_Shipping_Feed.xlsx"
         ups_sheet = "UPS-AP-Data"
-        charge="Published Charge"
+        charge="Net Amount Due"
 
         ups_csv = input("Enter the UPS shipping data file as .csv: ")
         
@@ -205,32 +202,36 @@ def main():
         for r in range(2,t_rows+1):
             for c in range(1,t_cols):  
                 if v_ws.cell(row=r, column=2).value != invoiceNumber:
-                    v_ws1.cell(row=r, column=1).value = vendor_ups                                        #Vendor Number
+                    v_ws1.cell(row=r, column=1).value = vendor_ups                                          #Vendor Number
                     v_ws1.cell(row=r, column=2).value = terms                                               #Default Billing Terms
                     v_ws1.cell(row=r, column=3).value = conv_date(v_ws.cell(row=r, column=invDate).value)
                     v_ws1.cell(row=r, column=4).value = v_ws.cell(row=r, column=invCol).value               #Invoice Number
                     v_ws1.cell(row=r, column=5).value = v_ws.cell(row=r, column=descCol).value              #Description
                     v_ws1.cell(row=r, column=9).value = interCompany                                        #Inter Company
-                    v_ws1.cell(row=r, column=10).value = generalLedger   #General Ledger
-                    if v_ws.cell(row=r, column=tracking).value is None:
+                    v_ws1.cell(row=r, column=10).value = generalLedger
+                    if v_ws.cell(row=r, column=amountCol).value == None:
                         v_ws1.cell(row=r, column=11).value = 0
-                    else:
-                        v_ws1.cell(row=r, column=11).value = (v_ws.cell(row=r, column=pubcharged).value - v_ws.cell(row=r, column=incentives).value)           #Amount
-                    v_ws1.cell(row=r, column=11).number_format = numberFormat   
+                    else:                              
+                        v_ws1.cell(row=r, column=11).value = v_ws.cell(row=r, column=amountCol).value
+                    if v_ws1.cell(row=r, column=5).value == "Discounts":
+                        v_ws1.cell(row=r, column=11).value *= -1
+                    v_ws1.cell(row=r, column=11).number_format = numberFormat
                     v_ws1.cell(row=r, column=17).value = v_ws.cell(row=r, column=notesCol).value
-                    v_ws1.cell(row=r, column=34).value = v_ws.cell(row=r, column=glCol).value          #Notes
+                    v_ws1.cell(row=r, column=34).value = v_ws.cell(row=r, column=glCol).value                                                                                         #Notes
                     invoiceNumber = v_ws.cell(row=r, column=2).value                                        #Incremented Invoice Number 
                 else:
                     v_ws1.cell(row=r, column=5).value = v_ws.cell(row=r, column=descCol).value              #Description
-                    v_ws1.cell(row=r, column=9).value = interCompany                            #Inter Company
+                    v_ws1.cell(row=r, column=9).value = interCompany                                        #Inter Company
                     v_ws1.cell(row=r, column=10).value = generalLedger                                      #General Ledger
-                    if v_ws.cell(row=r, column=tracking).value is None:
+                    if v_ws.cell(row=r, column=amountCol).value == None:
                         v_ws1.cell(row=r, column=11).value = 0
-                    else:
-                        v_ws1.cell(row=r, column=11).value = (v_ws.cell(row=r, column=pubcharged).value - v_ws.cell(row=r, column=incentives).value)             #Amount
-                    v_ws1.cell(row=r, column=11).number_format = numberFormat   
+                    else:                              
+                        v_ws1.cell(row=r, column=11).value = v_ws.cell(row=r, column=amountCol).value
+                    if v_ws1.cell(row=r, column=5).value == "Discounts":
+                        v_ws1.cell(row=r, column=11).value *= -1
+                    v_ws1.cell(row=r, column=11).number_format = numberFormat
                     v_ws1.cell(row=r, column=17).value = v_ws.cell(row=r, column=notesCol).value
-                    v_ws1.cell(row=r, column=34).value = v_ws.cell(row=r, column=glCol).value           #Notes
+                    v_ws1.cell(row=r, column=34).value = v_ws.cell(row=r, column=glCol).value               #Notes
                     invoiceNumber = v_ws.cell(row=r, column=2).value                                        #Incremented Invoice Number 
 
         v_wb.save(ups_excel)

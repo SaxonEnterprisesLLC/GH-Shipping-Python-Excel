@@ -12,14 +12,16 @@ import time as t
 def csvToExcel(csvFile, excelFile, col, vendor):
     
     Col1 = col
-    Col2 = "Incentives"
-    Col3 = "Net Amount Due"
+    dropCol="Shipping System / Adjustment"
+    dropColName = "Import Shipment Detail"
+    pubCharged = "Published Charge"
 
     if vendor == "FEDEX": 
         try:
             csv_file = pd.read_csv(csvFile)
             # remove , in Col1 so that we can change to float
             csv_file[Col1] = csv_file[Col1].replace(',', '', regex=True)
+            csv_file[Col1] = csv_file[Col1].replace('"', '', regex=True)
             csv_file = csv_file.astype({Col1:'float'})
             fedex_file = pd.ExcelWriter(excelFile)
             csv_file.to_excel(fedex_file, index=False)
@@ -47,17 +49,11 @@ def csvToExcel(csvFile, excelFile, col, vendor):
             # remove , in Col1 so that we can change to float
             csv_file[Col1] = csv_file[Col1].str.replace(',', '')
             csv_file[Col1] = csv_file[Col1].str.replace('$', '')
+            csv_file[Col1] = csv_file[Col1].str.replace('(', '')
+            csv_file[Col1] = csv_file[Col1].str.replace(')', '')
             csv_file = csv_file.astype({Col1:'float'})
-            csv_file[Col2] = csv_file[Col2].str.replace(',', '')
-            csv_file[Col2] = csv_file[Col2].str.replace('$', '')
-            csv_file[Col2] = csv_file[Col2].str.replace('(', '')
-            csv_file[Col2] = csv_file[Col2].str.replace(')', '')
-            csv_file = csv_file.astype({Col2:'float'})
-            csv_file[Col3] = csv_file[Col3].str.replace(',', '')
-            csv_file[Col3] = csv_file[Col3].str.replace('$', '')
-            csv_file[Col3] = csv_file[Col3].str.replace('(', '')
-            csv_file[Col3] = csv_file[Col3].str.replace(')', '')
-            csv_file = csv_file.astype({Col3:'float'})
+            csv_file = csv_file[csv_file[dropCol].str.contains(dropColName)==False]
+            #csv_file = csv_file[csv_file[pubCharged].str.contains("")==False]
             ups_file = pd.ExcelWriter(excelFile)
             csv_file.to_excel(ups_file, index=False)
             ups_file.save()
