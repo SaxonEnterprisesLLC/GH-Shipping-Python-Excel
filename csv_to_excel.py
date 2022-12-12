@@ -53,7 +53,9 @@ def csvToExcel(csvFile, excelFile, col, vendor):
             csv_file[Col1] = csv_file[Col1].str.replace(')', '')
             csv_file = csv_file.astype({Col1:'float'})
             csv_file = csv_file[csv_file[dropCol].str.contains(dropColName)==False]
-            #csv_file = csv_file[csv_file[pubCharged].str.contains("")==False]
+            csv_file = csv_file[csv_file[pubCharged].isnull()]
+            #csv_file.drop(csv_file[(csv_file["Published Charge"] == None)].index,axis=0,inplace=True)
+            #csv_file = csv_file[csv_file[pubCharged].str.isalnum()==True]
             ups_file = pd.ExcelWriter(excelFile)
             csv_file.to_excel(ups_file, index=False)
             ups_file.save()

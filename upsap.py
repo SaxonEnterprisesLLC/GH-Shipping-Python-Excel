@@ -117,6 +117,7 @@ def main():
     numberFormat = '#,##0.00'
     interCompany = 1
     generalLedger = "9000-00-0000"
+    fees="8105-00-7000"
 
     #add menu logic to pick vender
     current_vender = vender1
@@ -207,8 +208,11 @@ def main():
                     v_ws1.cell(row=r, column=3).value = conv_date(v_ws.cell(row=r, column=invDate).value)
                     v_ws1.cell(row=r, column=4).value = v_ws.cell(row=r, column=invCol).value               #Invoice Number
                     v_ws1.cell(row=r, column=5).value = v_ws.cell(row=r, column=descCol).value              #Description
-                    v_ws1.cell(row=r, column=9).value = interCompany                                        #Inter Company
-                    v_ws1.cell(row=r, column=10).value = generalLedger
+                    v_ws1.cell(row=r, column=9).value = interCompany
+                    if v_ws1.cell(row=r, column=5).value == "Fees":
+                        v_ws1.cell(row=r, column=10).value = fees
+                    else:                                     
+                        v_ws1.cell(row=r, column=10).value = generalLedger
                     if v_ws.cell(row=r, column=amountCol).value == None:
                         v_ws1.cell(row=r, column=11).value = 0
                     else:                              
@@ -222,7 +226,10 @@ def main():
                 else:
                     v_ws1.cell(row=r, column=5).value = v_ws.cell(row=r, column=descCol).value              #Description
                     v_ws1.cell(row=r, column=9).value = interCompany                                        #Inter Company
-                    v_ws1.cell(row=r, column=10).value = generalLedger                                      #General Ledger
+                    if v_ws1.cell(row=r, column=5).value == "Fees":
+                        v_ws1.cell(row=r, column=10).value = fees
+                    else:                                     
+                        v_ws1.cell(row=r, column=10).value = generalLedger                                     #General Ledger
                     if v_ws.cell(row=r, column=amountCol).value == None:
                         v_ws1.cell(row=r, column=11).value = 0
                     else:                              
@@ -243,7 +250,8 @@ def main():
 
     for r in range(2,t_rows+1):
         for c in range(1,t_cols):
-            sheet.cell(row=r, column=10).value = lookUpGL(sheet.cell(row=r, column=34).value)
+            if sheet.cell(row=r, column=10).value == None:
+                sheet.cell(row=r, column=10).value = lookUpGL(sheet.cell(row=r, column=34).value)
     
     # removing the shipping codes column 
     sheet.delete_cols(34)
