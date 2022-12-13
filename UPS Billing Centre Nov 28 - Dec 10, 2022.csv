@@ -1,0 +1,137 @@
+﻿Account Number,Invoice Number,Invoice Date,Tracking Number,Pickup Number,Reference Number 1,Reference Number 2,Reference Number 3,Reference Number 4,Reference Number 5,Shipping System / Adjustment,Zone,Service Type,Published Charge,Incentives,Net Amount Due
+0000083Y99,1622591481,28-Nov-22,,,,,,,,Discounts,,,,,
+0000083Y99,1622591481,28-Nov-22,,,,,,,,Discounts,,,,,
+0000083Y99,1622591481,28-Nov-22,,,,,,,,Discounts,,,,,
+0000083Y99,1622591481,28-Nov-22,,,,,,,,Consignee Charges,,,,,$208.78 
+0000083Y99,1622591481,28-Nov-22,,,,,,,,Amount Paid/Adjusted,,,,,$73.23 
+0000083Y99,1622591481,28-Nov-22,,,,,,,,Discounts,,,,,($135.55)
+0000083Y99,1622591481,28-Nov-22,1ZAW50960491385636,,PF 614,,,,,Import Shipment Detail,451,WW Saver,$208.78 ,$135.55 ,$73.23 
+0000083Y99,1623495351,29-Nov-22,,,,,,,,Discounts,,,,,
+0000083Y99,1623495351,29-Nov-22,,,,,,,,Discounts,,,,,
+0000083Y99,1623495351,29-Nov-22,,,,,,,,Discounts,,,,,
+0000083Y99,1623495351,29-Nov-22,,,,,,,,Consignee Charges,,,,,$318.10 
+0000083Y99,1623495351,29-Nov-22,,,,,,,,Discounts,,,,,($188.02)
+0000083Y99,1623495351,29-Nov-22,,,,,,,,Amount Paid/Adjusted,,,,,$130.08 
+0000083Y99,1623495351,29-Nov-22,1ZY0691F0493246131,,,,,,,Import Shipment Detail,451,WW Saver,$318.10 ,$188.02 ,$130.08 
+0000083Y99,1624527421,2-Dec-22,,,,,,,,Discounts,,,,,
+0000083Y99,1624527421,2-Dec-22,,,,,,,,Discounts,,,,,
+0000083Y99,1624527421,2-Dec-22,,,,,,,,Discounts,,,,,
+0000083Y99,1624527421,2-Dec-22,,,,,,,,Discounts,,,,,($134.74)
+0000083Y99,1624527421,2-Dec-22,,,,,,,,Amount Paid/Adjusted,,,,,$72.78 
+0000083Y99,1624527421,2-Dec-22,,,,,,,,Consignee Charges,,,,,$207.52 
+0000083Y99,1624527421,2-Dec-22,1Z8X36250490389840,,ART. SIGMA,,,,,Import Shipment Detail,451,WW Saver,$207.52 ,$134.74 ,$72.78 
+0000083Y99,1624079522,29-Nov-22,,,,,,,,Discounts,,,,,
+0000083Y99,1624079522,29-Nov-22,,,,,,,,Discounts,,,,,
+0000083Y99,1624079522,29-Nov-22,,,,,,,,Discounts,,,,,
+0000083Y99,1624079522,29-Nov-22,,,,,,,,Discounts,,,,,
+0000083Y99,1624079522,29-Nov-22,,,,,,,,Government Charges,,,,,$125.00 
+0000083Y99,1624079522,29-Nov-22,,,,,,,,Brokerage Charges,,,,,$13.80 
+0000083Y99,1624079522,29-Nov-22,,,,,,,,Discounts,,,,,($415.21)
+0000083Y99,1624079522,29-Nov-22,,,,,,,,Transportation Charges,,,,,$697.06 
+0000083Y99,1624079522,29-Nov-22,M2420029121,,,,,,,Import Shipment Detail,951,WW Express,$371.84 ,$266.64 ,$105.20 
+0000083Y99,1624079522,29-Nov-22,1Z3047Y70497396029,,VE10090,LANIFICIO DONNA,,,,Import Shipment Detail,1,Dom. Express Saver,$96.40 ,$0.00 ,$96.40 
+0000083Y99,1624079522,29-Nov-22,M2420029112,,,,,,,Import Shipment Detail,951,WW Express,$228.82 ,$148.57 ,$80.25 
+0000083Y99,1624079522,29-Nov-22,M2398318773,,FP,,,,,Import Shipment Detail,704,WW Standard,$138.80 ,$0.00 ,$138.80 
+0000083Y99,1626183709,6-Dec-22,,,,,,,,Discounts,,,,,
+0000083Y99,1626183709,6-Dec-22,,,,,,,,Discounts,,,,,
+0000083Y99,1626183709,6-Dec-22,,,,,,,,Discounts,,,,,
+0000083Y99,1626183709,6-Dec-22,,,,,,,,Discounts,,,,,
+0000083Y99,1626183709,6-Dec-22,,,,,,,,Transportation Charges,,,,,$636.06 
+0000083Y99,1626183709,6-Dec-22,,,,,,,,Discounts,,,,,($305.17)
+0000083Y99,1626183709,6-Dec-22,M2398318773,,FP,,,,,Import Shipment Detail,704,WW Standard,$209.47 ,$0.00 ,$209.47 
+0000083Y99,1626183709,6-Dec-22,M2420029103,,,,,,,Import Shipment Detail,451,WW Saver,$426.59 ,$305.17 ,$121.42 
+0000084VF3,1625263991,2-Dec-22,,,,,,,,Discounts,,,,,
+0000084VF3,1625263991,2-Dec-22,,,,,,,,Discounts,,,,,
+0000084VF3,1625263991,2-Dec-22,,,,,,,,Discounts,,,,,
+0000084VF3,1625263991,2-Dec-22,,,,,,,,Discounts,,,,,
+0000084VF3,1625263991,2-Dec-22,,,,,,,,Discounts,,,,,
+0000084VF3,1625263991,2-Dec-22,,,,,,,,Discounts,,,,,"($1,131.34)"
+0000084VF3,1625263991,2-Dec-22,,,,,,,,US Customs Duties,,,,,$850.07 
+0000084VF3,1625263991,2-Dec-22,,,,,,,,Consignee Charges,,,,,"$1,630.48 "
+0000084VF3,1625263991,2-Dec-22,,,,,,,,Brokerage Charges,,,,,$48.00 
+0000084VF3,1625263991,2-Dec-22,1ZW978716692565361,,FATVEX2022-1239,MERCE SICURA,,,,Import Shipment Detail,951,WW Express,$703.42 ,$297.02 ,$406.40 
+0000084VF3,1625263991,2-Dec-22,1ZE947W00495494163,,FT 1028,,,,,Import Shipment Detail,451,WW Saver,$357.05 ,$188.02 ,$169.03 
+0000084VF3,1625263991,2-Dec-22,1ZW978716693368546,,FATVEX2022-1236,MERCE SICURA,,,,Import Shipment Detail,951,WW Express,$996.94 ,$435.77 ,$561.17 
+0000084VF3,1625263991,2-Dec-22,1ZE947W00499459551,,FT 1016,,,,,Import Shipment Detail,451,WW Saver,$471.14 ,$210.53 ,$260.61 
+0000084VF3,1626770100,8-Dec-22,,,,,,,,Consignee Charges,,,,,$243.96 
+0000084VF3,1626770100,8-Dec-22,M2424649936,,,,,,,Import Shipment Detail,951,WW Express,$243.96 ,$168.80 ,$75.16 
+0000084VF3,1626770100,8-Dec-22,,,,,,,,Discounts,,,,,($168.80)
+0000084VF3,1626770100,8-Dec-22,,,,,,,,Discounts,,,,,
+0000084VF3,1626770100,8-Dec-22,,,,,,,,Discounts,,,,,
+0000084VF3,1626770100,8-Dec-22,,,,,,,,Discounts,,,,,
+0000084VF3,000000084VF3492,3-Dec-22,,,,,,,,Adjustments,,,$1.00 ,$0.00 ,$1.00 
+0000084VF3,000000084VF3492,3-Dec-22,,,,,,,,Outbound,,,,,
+0000084VF3,000000084VF3492,3-Dec-22,,,,,,,,Outbound,,,,,
+0000084VF3,000000084VF3492,3-Dec-22,,,,,,,,Outbound,,,,,
+0000084VF3,000000084VF3492,3-Dec-22,,,,,,,,Outbound,,,,,
+0000084VF3,000000084VF3492,3-Dec-22,,,,,,,,Outbound,,,,,
+0000084VF3,000000084VF3492,3-Dec-22,,,,,,,,Shipping Charge Corrections,,,,,$3.99 
+0000084VF3,000000084VF3492,3-Dec-22,,,,,,,,Worldwide Service,,,,,$115.76 
+0000084VF3,000000084VF3492,3-Dec-22,,,,,,,,Adjustments,,,,,$1.00 
+0000084VF3,000000084VF3492,3-Dec-22,1Z084VF36608499337,,F23,7830-00-1000,,,,Worldwide Service,901,Worldwide Express,$158.41 ,($100.26),$58.15 
+0000084VF3,000000084VF3492,3-Dec-22,1Z084VF30496246551,,F23,7830-00-1000,,,,Worldwide Service,401,Worldwide Saver,$156.59 ,($98.98),$57.61 
+0000084VF3,000000084VF3492,3-Dec-22,1Z084VF36608499337,,F23,7830-00-1000,,,,Shipping Charge Corrections,901,Express,$43.56 ,($39.57),$3.99 
+0000084VF3,000000084VF3502,10-Dec-22,,,,,,,,Worldwide Service,,,,,$107.36 
+0000084VF3,000000084VF3502,10-Dec-22,,,,,,,,Outbound,,,,,
+0000084VF3,000000084VF3502,10-Dec-22,,,,,,,,Outbound,,,,,
+0000084VF3,000000084VF3502,10-Dec-22,,,,,,,,Outbound,,,,,
+0000084VF3,000000084VF3502,10-Dec-22,,,,,,,,Outbound,,,,,
+0000084VF3,000000084VF3502,10-Dec-22,,,,,,,,Outbound,,,,,
+0000084VF3,000000084VF3502,10-Dec-22,1Z084VF36699907171,,F23,7830-00-1000,,,,Worldwide Service,901,Worldwide Express,$136.56 ,($86.81),$49.75 
+0000084VF3,000000084VF3502,10-Dec-22,1Z084VF30407949147,,F23,7830-00-1000,,,,Worldwide Service,401,Worldwide Saver,$156.59 ,($98.98),$57.61 
+0000084VF3,1623620241,28-Nov-22,,,,,,,,Discounts,,,,,
+0000084VF3,1623620241,28-Nov-22,,,,,,,,Discounts,,,,,
+0000084VF3,1623620241,28-Nov-22,,,,,,,,Discounts,,,,,
+0000084VF3,1623620241,28-Nov-22,,,,,,,,Consignee Charges,,,,,$906.49 
+0000084VF3,1623620241,28-Nov-22,,,,,,,,Discounts,,,,,($398.55)
+0000084VF3,1623620241,28-Nov-22,1ZE947W00492520415,,PROFORMA 96,,,,,Import Shipment Detail,451,WW Saver,$293.34 ,$210.53 ,$82.81 
+0000084VF3,1623620241,28-Nov-22,H9518301153,,,,,,,Import Shipment Detail,951,WW Express Plus,$351.30 ,$0.00 ,$351.30 
+0000084VF3,1623620241,28-Nov-22,1Z49E4Y70494836536,,,,,,,Import Shipment Detail,451,WW Saver,$261.85 ,$188.02 ,$73.83 
+0000084VF3,1624230714,30-Nov-22,,,,,,,,Brokerage Charges,,,,,$12.00 
+0000084VF3,1624230714,30-Nov-22,,,,,,,,US Customs Duties,,,,,$155.56 
+0000084VF3,1624230714,30-Nov-22,M2417710551,,,,,,,Import Shipment Detail,951,WW Express,$167.56 ,$0.00 ,$167.56 
+0000084VF3,1624401904,30-Nov-22,,,,,,,,Brokerage Charges,,,,,$34.56 
+0000084VF3,1624401904,30-Nov-22,,,,,,,,Government Charges,,,,,$94.56 
+0000084VF3,1624401904,30-Nov-22,1Z084VF36695076335,,F23,7830-00-1000,,,,Import Shipment Detail,901,WW Express,$75.70 ,$0.00 ,$75.70 
+0000084VF3,1624401904,30-Nov-22,1Z084VF30409593929,,F23,7830-00-1000,,,,Import Shipment Detail,401,WW Saver,$53.42 ,$0.00 ,$53.42 
+0000084VF3,1624644438,1-Dec-22,,,,,,,,Discounts,,,,,
+0000084VF3,1624644438,1-Dec-22,,,,,,,,Discounts,,,,,
+0000084VF3,1624644438,1-Dec-22,,,,,,,,Discounts,,,,,
+0000084VF3,1624644438,1-Dec-22,,,,,,,,US Customs Duties,,,,,$269.44 
+0000084VF3,1624644438,1-Dec-22,,,,,,,,Consignee Charges,,,,,$438.10 
+0000084VF3,1624644438,1-Dec-22,,,,,,,,Discounts,,,,,($299.30)
+0000084VF3,1624644438,1-Dec-22,,,,,,,,Brokerage Charges,,,,,$12.00 
+0000084VF3,1624644438,1-Dec-22,1ZW978716694873499,,FATVEX2022-1233,MERCE SICURA,,,,Import Shipment Detail,951,WW Express,$719.54 ,$299.30 ,$420.24 
+0000084VF3,1626183736,6-Dec-22,,,,,,,,Discounts,,,,,
+0000084VF3,1626183736,6-Dec-22,,,,,,,,Discounts,,,,,
+0000084VF3,1626183736,6-Dec-22,,,,,,,,Discounts,,,,,
+0000084VF3,1626183736,6-Dec-22,,,,,,,,Discounts,,,,,
+0000084VF3,1626183736,6-Dec-22,,,,,,,,Discounts,,,,,($291.62)
+0000084VF3,1626183736,6-Dec-22,,,,,,,,Transportation Charges,,,,,$817.87 
+0000084VF3,1626183736,6-Dec-22,M2417710551,,,,,,,Import Shipment Detail,951,WW Express,$420.40 ,$291.62 ,$128.78 
+0000084VF3,1626183736,6-Dec-22,1ZW978710496297313,,DOCUMENTI,MERCE SICURA,,,,Import Shipment Detail,10,WW Saver,$108.30 ,$0.00 ,$108.30 
+0000084VF3,1626183736,6-Dec-22,1ZF197R00493892759,,,,,,,Import Shipment Detail,1,Dom. Express Saver,$137.47 ,$0.00 ,$137.47 
+0000084VF3,1626183736,6-Dec-22,1ZF197R00497906236,,,,,,,Import Shipment Detail,1,Dom. Express Saver,$88.03 ,$0.00 ,$88.03 
+0000084VF3,1626183736,6-Dec-22,1ZW978716695122646,,DOCUMENTI,MERCE SICURA,,,,Import Shipment Detail,1,Dom. Express,$63.67 ,$0.00 ,$63.67 
+0000084VF3,1626263088,6-Dec-22,,,,,,,,Brokerage Charges,,,,,$10.68 
+0000084VF3,1626263088,6-Dec-22,,,,,,,,Government Charges,,,,,$0.45 
+0000084VF3,1626263088,6-Dec-22,1Z084VF36608499337,,F23,7830-00-1000,,,,Import Shipment Detail,901,WW Express,$11.13 ,$0.00 ,$11.13 
+0000084VF3,1626995154,8-Dec-22,,,,,,,,Government Charges,,,,,$19.76 
+0000084VF3,1626995154,8-Dec-22,,,,,,,,Brokerage Charges,,,,,$18.22 
+0000084VF3,1626995154,8-Dec-22,1Z084VF30496246551,,F23,7830-00-1000,,,,Import Shipment Detail,401,WW Saver,$20.83 ,$0.00 ,$20.83 
+0000084VF3,1626995154,8-Dec-22,1Z084VF30407949147,,F23,7830-00-1000,,,,Import Shipment Detail,401,WW Saver,$17.15 ,$0.00 ,$17.15 
+0000084VF3,1624079577,29-Nov-22,,,,,,,,Brokerage Charges,,,,,$7.26 
+0000084VF3,1624079577,29-Nov-22,,,,,,,,Transportation Charges,,,,,$356.62 
+0000084VF3,1624079577,29-Nov-22,,,,,,,,Government Charges,,,,,$19.97 
+0000084VF3,1624079577,29-Nov-22,1ZA5781X0499327998,,MIL/34999,PANELS,,,,Import Shipment Detail,4,WW Saver,$134.56 ,$0.00 ,$134.56 
+0000084VF3,1624079577,29-Nov-22,1ZA5781X0491543867,,MIL/35047,PANELS,,,,Import Shipment Detail,4,WW Saver,$124.99 ,$0.00 ,$124.99 
+0000084VF3,1624079577,29-Nov-22,1ZA5781X0493871820,,MIL/35000,PANELS,,,,Import Shipment Detail,4,WW Saver,$124.30 ,$0.00 ,$124.30 
+0000084VF3,1627177321,9-Dec-22,,,,,,,,Discounts,,,,,($74.49)
+0000084VF3,1627177321,9-Dec-22,,,,,,,,Discounts,,,,,
+0000084VF3,1627177321,9-Dec-22,,,,,,,,Discounts,,,,,
+0000084VF3,1627177321,9-Dec-22,1ZW834950496213951,,,,,,,Import Shipment Detail,451,WW Saver,$147.32 ,$74.49 ,$72.83 
+0000084VF3,1627177321,9-Dec-22,,,,,,,,Discounts,,,,,
+0000084VF3,1627177321,9-Dec-22,,,,,,,,Consignee Charges,,,,,$147.32 
+000065V624,1624745981,1-Dec-22,,,,,,,,US Customs Duties,,,,,$389.76 
+000065V624,1624745981,1-Dec-22,,,,,,,,Brokerage Charges,,,,,$12.00 
+000065V624,1624745981,1-Dec-22,M2420029103,,,,,,,Import Shipment Detail,451,WW Saver,$401.76 ,$0.00 ,$401.76 
